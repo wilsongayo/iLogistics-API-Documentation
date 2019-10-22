@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: iLogistics App
+  version: '1.0'
+servers:
+  - url: 'http://ark.linode:5501'
+paths:
+  /login:
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+        '':
+          description: ''
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Content-Type
+          description: ''
+        - schema:
+            type: string
+          in: header
+          name: x-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-version
+        - schema:
+            type: string
+          in: header
+          name: x-api-version
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                deviceId:
+                  type: string
+                password:
+                  type: string
+            examples: {}
+        description: ''
+    parameters: []
+components:
+  schemas: {}
+  securitySchemes: {}
