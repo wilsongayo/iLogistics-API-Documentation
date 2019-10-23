@@ -2,6 +2,8 @@ openapi: 3.0.0
 info:
   title: iLogistics App
   version: '1.0'
+  contact: {}
+  description: ''
 servers:
   - url: 'http://ark.linode:5501'
 paths:
@@ -11,6 +13,75 @@ paths:
       responses:
         '200':
           description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  roles:
+                    type: array
+                    items:
+                      type: string
+                  status:
+                    type: string
+                  tokens:
+                    type: array
+                    items:
+                      type: string
+                  _id:
+                    type: string
+                  email:
+                    type: string
+                  username:
+                    type: string
+                  deviceId:
+                    type: string
+                  driver:
+                    type: object
+                    properties:
+                      startDate:
+                        type: object
+                        properties:
+                          year:
+                            type: integer
+                          month:
+                            type: integer
+                          day:
+                            type: integer
+                      _id:
+                        type: string
+                      name:
+                        type: string
+                      nickName:
+                        type: string
+                      phone:
+                        type: string
+                      IDNumber:
+                        type: string
+                      deviceId:
+                        type: string
+                      status:
+                        type: string
+                      user:
+                        type: string
+                      inc:
+                        type: integer
+                      __v:
+                        type: integer
+                      photo:
+                        type: string
+                  createdAt:
+                    type: string
+                    format: date-time
+                  updatedAt:
+                    type: string
+                    format: date-time
+                  __v:
+                    type: string
+              examples: {}
+        '422':
+          description: Unprocessable Entity
+          headers: {}
         '':
           description: ''
       parameters:
@@ -47,7 +118,35 @@ paths:
                   type: string
             examples: {}
         description: ''
+      description: ''
     parameters: []
+  /register:
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Content-Type
+        - schema:
+            type: string
+          in: header
+          name: x-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-version
+        - schema:
+            type: string
+          in: header
+          name: x-api-version
 components:
   schemas: {}
   securitySchemes: {}
