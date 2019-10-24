@@ -120,6 +120,69 @@ paths:
         description: ''
       description: ''
     parameters: []
+  /pre-register:
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Content-Type
+          description: ''
+        - schema:
+            type: string
+          in: header
+          name: x-client
+          description: ''
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-version
+        - schema:
+            type: string
+          in: header
+          name: x-api-version
+  /mobile/deliveries:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Content-Type
+        - schema:
+            type: string
+          in: header
+          name: x-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-version
+        - schema:
+            type: string
+          in: header
+          name: x-api-version
+        - schema:
+            type: string
+          in: header
+          name: x-user-token
+        - schema:
+            type: string
+          in: header
+          name: x-device-id
   /register:
     post:
       summary: ''
@@ -147,6 +210,181 @@ paths:
             type: string
           in: header
           name: x-api-version
+  /mobile/invoice/sequence:
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Content-Type
+        - schema:
+            type: string
+          in: header
+          name: x-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-version
+        - schema:
+            type: string
+          in: header
+          name: x-api-version
+        - schema:
+            type: string
+          in: header
+          name: x-user-token
+        - schema:
+            type: string
+          in: header
+          name: x-device-id
+  /mobile/invoice/scan:
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Content-Type
+        - schema:
+            type: string
+          in: header
+          name: x-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-version
+        - schema:
+            type: string
+          in: header
+          name: x-api-version
+        - schema:
+            type: string
+          in: header
+          name: x-user-token
+        - schema:
+            type: string
+          in: header
+          name: x-device-id
+  /mobile/truck/update-location:
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Content-Type
+        - schema:
+            type: string
+          in: header
+          name: x-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-version
+        - schema:
+            type: string
+          in: header
+          name: x-api-version
+        - schema:
+            type: string
+          in: header
+          name: x-user-token
+        - schema:
+            type: string
+          in: header
+          name: x-device-id
+  /mobile/check/in:
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Content-Type
+        - schema:
+            type: string
+          in: header
+          name: x-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-version
+        - schema:
+            type: string
+          in: header
+          name: x-api-version
+        - schema:
+            type: string
+          in: header
+          name: x-user-token
+        - schema:
+            type: string
+          in: header
+          name: x-device-id
+  /mobile/check/out:
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Content-Type
+        - schema:
+            type: string
+          in: header
+          name: x-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-client
+        - schema:
+            type: string
+          in: header
+          name: x-mobile-version
+        - schema:
+            type: string
+          in: header
+          name: x-api-version
+        - schema:
+            type: string
+          in: header
+          name: x-user-token
+        - schema:
+            type: string
+          in: header
+          name: x-device-id
 components:
   schemas: {}
   securitySchemes: {}
